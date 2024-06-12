@@ -5,6 +5,8 @@
 
 body {
     min-height: 100dvh;
+    background-color: #181a1b;
+    color:white;
 }
 
 input,
@@ -45,14 +47,17 @@ svg {
     width: 100%;
     z-index: 100;
     padding: 10px 20px;
-    background-color: aqua;
+    background-color:#8c8d8d;
     .header_nav_conteiner {
         display: flex;
         justify-content: space-between;
         align-items: center;
         a{
             text-decoration: none;
-            color: black;
+            color: #ccc9c5;
+        &:hover {
+            color: #fff;
+        }
         }
     }
 }
@@ -73,13 +78,47 @@ a{
     display: inline;
 }
 .container {
-    margin-top: 60px;
-   background-color: blueviolet;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
 }
 
+.article_you, .section_skills, .formacion_academica, .contacto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.article_you{
+    border: 1px solid red;
+    margin: 0 10%;
+}
+.carousel {
+    overflow: hidden;
+}
 
+.carousel__images {
+    display: flex;
+}
 
+.carousel__image {
+    flex-shrink: 0;
+    width: 10%;
+}
+.carousel__images img {
+    transition: transform 0.3s ease-in-out;
+}
 
+.carousel__images img:hover {
+    transform: scale(1.1);
+}
+@keyframes carousel {
+    0% { transform: translateX(0); }
+    85.71% { transform: translateX(-50%); }
+    100% { transform: translateX(-50%); }
+}
 
 
 
